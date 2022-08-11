@@ -4,4 +4,6 @@ export interface Props {
     size?: number;
     bold?: boolean;
     line?: number;
+    absolute?: boolean;
+    opacity?: number;
 }
