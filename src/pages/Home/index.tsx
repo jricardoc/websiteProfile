@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Text from "../../components/Text";
 import theme from "../../global/styles/theme";
 import Header from "./Header";
@@ -9,9 +9,12 @@ import {
   AboutWrapper,
   AboutTitle,
   ImageWrapper,
+  ShadowBox,
   InfoWrapper,
   InfoContainer,
   Info,
+  Myname,
+  Name,
   MyData,
   NamePhone,
   NamePhoneTR,
@@ -20,15 +23,23 @@ import {
   CountryEmail,
   Education,
   Image,
+  SkillsWrapper,
+  SpaceScroll,
+  SkillContainer,
+  FirstSkillContainer,
+  SecondSkillContainer,
+  FloatContainer,
+  FloatContainerSecond,
+  TextSkill,
 } from "./styles";
 
 export default function Home() {
   return (
     <Container>
-      <HeaderMain>
+      <HeaderMain id="home">
         <Header />
         <TitleWrapper>
-          <Text size={120} color={theme.colors.green_2} line={20} bold={true}>
+          <Text size={120} color={theme.colors.green_2} line={0} bold={true}>
             I'm a
           </Text>
           <Text
@@ -48,6 +59,7 @@ export default function Home() {
             Developer
           </Text>
         </TitleWrapper>
+        <SpaceScroll id="about"></SpaceScroll>
       </HeaderMain>
       <AboutWrapper>
         <AboutTitle>
@@ -68,23 +80,20 @@ export default function Home() {
         <InfoContainer>
           <ImageWrapper>
             <Image src={require("../../assets/images/IMG_4150.jpg")} />
+            <ShadowBox></ShadowBox>
           </ImageWrapper>
 
           <InfoWrapper>
             <Info>
-              <Text
-                size={50}
-                color={theme.colors.green_light_1}
-                bold={true}
-                line={30}
-              >
-                My name is Ricardo Carvalho
-              </Text>
-              <Text size={30} color={theme.colors.green_light_1} line={30}>
+              <Myname>
+                My name is <Name>Ricardo Carvalho</Name>
+              </Myname>
+              <Text size={20} color={theme.colors.green_light_1} line={30}>
                 I'm a Systems Development Technician, I'm part of a Startup
                 called Panjay, in which I develop the Front-end role. I'm
                 currently specializing in Application Development with React
-                Native at Rocketseat.
+                Native at Rocketseat. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptatibus modi aliquam, blanditiis officia, maiores dignissimos molestias asperiores rem repudiandae, temporibus laboriosam maxime sunt! Voluptates voluptatum aperiam iure quae libero.
               </Text>
             </Info>
 
@@ -110,13 +119,56 @@ export default function Home() {
               </NamePhone>
 
               <Education>
-                <Text size={25} color={theme.colors.green_light_1} line={0}>Education</Text>
-                <Text size={20} color={theme.colors.green_light_3} line={0}>Senai Cimatec - Technician: Systems Development</Text>
+                <Text size={25} color={theme.colors.green_light_1} line={0}>
+                  Education
+                </Text>
+                <Text size={20} color={theme.colors.green_light_3} line={0}>
+                  Senai Cimatec - Technician: Systems Development
+                </Text>
               </Education>
             </MyData>
           </InfoWrapper>
         </InfoContainer>
       </AboutWrapper>
+
+      <SkillsWrapper id="skills">
+        <AboutTitle>
+          <Text
+            size={250}
+            color={theme.colors.green_2}
+            absolute={true}
+            bold={true}
+            opacity={0.2}
+          >
+            Skills
+          </Text>
+          <Text size={120} color={theme.colors.green_light_1}>
+            Skills
+          </Text>
+        </AboutTitle>
+        <SkillContainer>
+          <FirstSkillContainer>
+            <FloatContainer />
+            <TextSkill>HTML and CSS</TextSkill>
+            <FloatContainerSecond />
+            <TextSkill>JavaScript</TextSkill>
+            <FloatContainerSecond />
+            <TextSkill>Typescript</TextSkill>
+            <FloatContainerSecond />
+            <TextSkill>Reactjs</TextSkill>
+          </FirstSkillContainer>
+          <SecondSkillContainer>
+            <FloatContainer />
+            <TextSkill>React Native</TextSkill>
+            <FloatContainerSecond />
+            <TextSkill>Angular</TextSkill>
+            <FloatContainerSecond />
+            <TextSkill>NextJs</TextSkill>
+            <FloatContainerSecond />
+            <TextSkill>Git and Github</TextSkill>
+          </SecondSkillContainer>
+        </SkillContainer>
+      </SkillsWrapper>
     </Container>
   );
 }

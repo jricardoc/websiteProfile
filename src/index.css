@@ -1,10 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Teko', sans-serif;
+  font-family: 'Montserrat', sans-serif, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #1B4332; */

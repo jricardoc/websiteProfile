@@ -1,16 +1,22 @@
-import React from 'react'
-import { Container, HeaderMenuLabel, HeaderMenuList } from './styles'
+import React from "react";
+import { Container, HeaderMenuLabel, HeaderMenuList, ScrollTo } from "./styles";
 
 export default function Header() {
   return (
     <Container>
-        <HeaderMenuLabel>
-            <HeaderMenuList>Home</HeaderMenuList>
-            <HeaderMenuList>About me</HeaderMenuList>
-            <HeaderMenuList>skills</HeaderMenuList>
-            <HeaderMenuList>portfolio</HeaderMenuList>
-            <HeaderMenuList>contact</HeaderMenuList>
-        </HeaderMenuLabel>
+      <HeaderMenuLabel>
+        <ScrollTo href="#home">
+          <HeaderMenuList>Home</HeaderMenuList>
+        </ScrollTo>
+        <ScrollTo href="#about">
+          <HeaderMenuList>About me</HeaderMenuList>
+        </ScrollTo>
+        <ScrollTo href="#skills">
+          <HeaderMenuList>skills</HeaderMenuList>
+        </ScrollTo>
+        <HeaderMenuList>portfolio</HeaderMenuList>
+        <HeaderMenuList>contact</HeaderMenuList>
+      </HeaderMenuLabel>
     </Container>
-  )
+  );
 }
