@@ -7,20 +7,19 @@ export const HeaderMain = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-  padding-top: 300px;
+  padding-top: 284px;
   padding-left: 260px;
   display: inline-block;
 `;
 
 export const AboutWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.green_bold_3};
+  /* background-color: ${({ theme }) => theme.colors.green_bold_3}; */
 `;
 
 export const AboutTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
 `;
 
 export const InfoContainer = styled.div`
@@ -34,16 +33,16 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 517px;
-  height: 777px;
+  width: 346px;
+  height: 520px;
   border-radius: 10px;
   position: absolute;
   box-shadow: 20px 20px 20px black;
 `;
 
 export const ShadowBox = styled.div`
-  width: 517px;
-  height: 777px;
+  width: 346px;
+  height: 520px;
   border-radius: 10px;
   border: 6px solid ${({ theme }) =>  theme.colors.green_2};
   margin: 40px;
@@ -54,7 +53,7 @@ export const Myname = styled.p`
   font-size: 40px;
   color: ${({ theme }) => theme.colors.green_light_1};
   font-weight: bold;
-  line-height: 50px;
+  line-height: 20px;
 `;
 
 export const Name = styled.span`
@@ -100,7 +99,7 @@ export const Education = styled.div`
   align-items: center;
   flex-direction: column;
   padding-right: 80px;
-  padding-top: 30px;
+  padding-bottom: 80px;
 `;
 
 export const SkillsWrapper = styled.div`
@@ -154,5 +153,4 @@ export const TextSkill = styled.p`
   color: ${({ theme }) => theme.colors.green_light_1};
   border-bottom: 15px solid rgba(0, 0, 0, 0.5);
   padding-bottom: 20px;
-  line-height: 20px;
 `;
